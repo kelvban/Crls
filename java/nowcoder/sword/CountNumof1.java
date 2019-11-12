@@ -1,3 +1,6 @@
+/*
+ * 输入一个整数，统计其二进制中1的个数
+ * */
 class CountNumof1{
     public int count(int num){
         int count = 0;

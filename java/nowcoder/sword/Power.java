@@ -1,3 +1,6 @@
+/**
+ * 指数运算
+ * */
 class Power{
     public double getResult(double base,int power) {
         double result=base;
