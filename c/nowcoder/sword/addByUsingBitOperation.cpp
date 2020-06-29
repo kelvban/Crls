@@ -12,8 +12,8 @@ class Solution{
 			return num1; 
 		}
 }; 
-int main(){
-	Solution solution;
-	int result=solution.addNum(5,4);
-	cout<<result<<endl;
-}
+//int main(){
+//	Solution solution;
+//	int result=solution.addNum(5,4);
+//	cout<<result<<endl;
+//}
