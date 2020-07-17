@@ -1,4 +1,4 @@
-import sun.security.util.Length;
+
 
 /**
  * Cut rope to get the max product of pieces
@@ -32,12 +32,12 @@ class CutRope{
         }
         return products[target];
     }
-    public static void main(String[] args) {
-        CutRope cutRope=new CutRope();
-        for(int i=1;i<=15;i++){
-            int result=cutRope.cutRope(i);
-            System.out.println(result);
-        }
+    // public static void main(String[] args) {
+    //     CutRope cutRope=new CutRope();
+    //     for(int i=1;i<=15;i++){
+    //         int result=cutRope.cutRope(i);
+    //         System.out.println(result);
+    //     }
         
-    }
+    // }
 }
