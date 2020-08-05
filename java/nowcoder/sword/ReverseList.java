@@ -23,16 +23,16 @@ class ReverseList{
         return pre;
     }
 
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
 
-         Node head=null;
-        for(int i=0;i<5;i++){
-            Node node=new Node(i);
-            node.next=head;
-            head=node;
-        }
-        ReverseList reverseList=new ReverseList();
-        Node result=reverseList.reverseList(head);
-        System.out.println(result.val);
-    }
+    //      Node head=null;
+    //     for(int i=0;i<5;i++){
+    //         Node node=new Node(i);
+    //         node.next=head;
+    //         head=node;
+    //     }
+    //     ReverseList reverseList=new ReverseList();
+    //     Node result=reverseList.reverseList(head);
+    //     System.out.println(result.val);
+    // }
 }
