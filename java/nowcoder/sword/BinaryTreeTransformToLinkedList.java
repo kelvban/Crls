@@ -2,40 +2,50 @@
  * Transforming binary search tree into bidirectional linked list
  */
 
-class BinaryTreeTransformToLinkedList{
-        //用于储存中序遍历当前的节点，作为中间变量，将双向指针链接起来
-        private TreeNode pre=null;
-        //递归到最深层，返回双向链表的头
-        private TreeNode head=null;
+public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+
+    public TreeNode(int val) {
+        this.val = val;
+
+    }
+
+}
+
+import java.util.*;
+public class Solution {
         public TreeNode Convert(TreeNode pRootOfTree) {
-            //这种中序遍历每次返回一个节点过于麻烦，所以定义一个函数每次返回为空
-            inOrder(pRootOfTree);
-            return head;
+            if(pRootOfTree==null){
+                return null;
+            }
+            ArrayList<TreeNode> list=new ArrayList<TreeNode>();
+            Convert(pRootOfTree,list);
+            return Convert(list);
         }
-        private void inOrder(TreeNode node)
-        {
-            //遍历到最深处节点为空进行返回
-            if(node==null)
-            {
-                return;
+        
+        //中序遍历，首先找到最左叶子节点，并添加入List中，再添加右叶子节点，递归，将中序遍历结果存入List
+        //画图过一遍，自己就明白了,记住并没有return,中间那句代码始终执行。
+
+        public void Convert(TreeNode pRootOfTree,ArrayList<TreeNode> list) {
+            if(pRootOfTree.left!=null){
+                Convert(pRootOfTree.left,list);
             }
-            //左递归
-            inOrder(node.left);
-            //中序遍历在中间进行处理
-            //利用pre将彼此互相指向
-            node.left=pre;
-            if(pre!=null)
-            {
-                pre.right=node;
+
+            list.add(pRootOfTree);
+
+            if(pRootOfTree.right!=null){
+                Convert(pRootOfTree.right,list);
             }
-            //pre移位
-            pre=node;
-            //递归到最深处才将头赋值，也就是双向链表的头
-            if(head==null)
-            {
-                head=node;
-            }
-            //右递归
-            inOrder(node.right);
         }
+
+        //修改指针，左右子树指向分别改为前驱和后继
+        public TreeNode Convert(ArrayList<TreeNode> list) {
+            for(int i=0;i<list.size()-1;i++){
+                list.get(i).right=list.get(i+1);
+                list.get(i+1).left=list.get(i);
+            }
+            return list.get(0);
+        } 
 }
