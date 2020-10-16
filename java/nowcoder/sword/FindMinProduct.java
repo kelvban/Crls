@@ -1,7 +1,7 @@
 /**
  * Find two numbers whose sum is the target number, and the product is the smallest 
  */
-
+package nowcoder.sword;
 import java.util.*;
 class FindMinProduct{
     public ArrayList<Integer> FindNumbersWithSum(int [] array,int target) {

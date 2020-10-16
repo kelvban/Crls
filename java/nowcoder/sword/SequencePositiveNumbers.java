@@ -1,7 +1,11 @@
 /**
  * find sequence of continuous positive integers with sum s
  */
-class SequencePositiveNumbers{
+package nowcoder.sword;
+
+import java.util.ArrayList;
+
+class SequencePositiveNumbers {
     public ArrayList<ArrayList<Integer> > FindContinuousSequence(int sum) {
        ArrayList<ArrayList<Integer>> result=new ArrayList<ArrayList<Integer>>();
        for(int i=1;i<sum;i++){

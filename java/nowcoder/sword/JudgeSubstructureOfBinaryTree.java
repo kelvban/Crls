@@ -1,7 +1,7 @@
 /**
  * Judge whether B is a substructure of A
  */
-
+package nowcoder.sword;
 class TreeNode{
     int val=0;
     TreeNode left=null;

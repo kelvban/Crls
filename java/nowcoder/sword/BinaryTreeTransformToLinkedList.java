@@ -1,21 +1,14 @@
+
+
 /**
  * Transforming binary search tree into bidirectional linked list
  */
-
-public class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    public TreeNode(int val) {
-        this.val = val;
-
-    }
-
-}
-
+package nowcoder.sword;
 import java.util.*;
-public class Solution {
+
+
+
+public class BinaryTreeTransformToLinkedList {
         public TreeNode Convert(TreeNode pRootOfTree) {
             if(pRootOfTree==null){
                 return null;

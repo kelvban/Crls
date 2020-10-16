@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+
 
 
 
@@ -8,6 +6,10 @@ import java.util.Map;
  * There is a number in the array that appears more than half the length of the array. 
  * Please find this number.
  */
+package nowcoder.sword;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 public class FindNumInArray {
     public int MoreThanHalfNum_Solution(int [] array) {
         Arrays.sort(array);

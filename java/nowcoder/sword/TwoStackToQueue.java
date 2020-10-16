@@ -1,7 +1,7 @@
 /**
  * use two stacks to implement a queue
  */
-
+package nowcoder.sword;
 import java.util.Stack;
 class TwoStackToQueue{
     Stack<Integer> stack1 = new Stack<Integer>();

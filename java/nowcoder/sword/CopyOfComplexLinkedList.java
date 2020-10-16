@@ -1,8 +1,10 @@
+
 /**
  * deep clone the linked list
  */
-
-public class RandomListNode {
+package nowcoder.sword;
+import java.util.*;
+class RandomListNode {
     int label;
     RandomListNode next = null; //for the next node
     RandomListNode random = null; // for a random node
@@ -16,7 +18,7 @@ class CopyOfComplexLinkedList{
 
     public RandomListNode Clone(RandomListNode pHead)
     {
-        HashMap<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
+        Map<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
         RandomListNode p = pHead;
         while(p != null){
             RandomListNode node = new RandomListNode(p.label);

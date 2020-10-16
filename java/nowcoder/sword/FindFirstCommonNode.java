@@ -1,8 +1,12 @@
 /**
 Find first Common node between two link list
  */
-class ListNode{
-    int  val；
+package nowcoder.sword;
+
+import java.util.LinkedList;
+
+class ListNode {
+    int  val;
     ListNode next=null;
 
     ListNode(int val){

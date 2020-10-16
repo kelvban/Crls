@@ -1,6 +1,7 @@
 /**
  * judge numbers if those are continuous
  */
+package nowcoder.sword;
 import java.util.*;
  class PokeIsContinuous{
     public boolean isContinuous(int [] numbers) {

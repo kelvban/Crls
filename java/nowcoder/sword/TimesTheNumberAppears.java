@@ -1,6 +1,7 @@
 /**
  * Get the number of times the number appears
  */
+package nowcoder.sword;
 import java.util.*;
 class TimesTheNumberAppears{
     public int GetNumberOfK(int [] array , int k) {

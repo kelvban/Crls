@@ -1,7 +1,7 @@
 /**
  * sub-string rotate left
  */
-
+package nowcoder.sword;
  import java.util.*;
 
 class RotateLeft{

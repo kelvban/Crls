@@ -1,8 +1,10 @@
-import java.util.PriorityQueue;
+
 
 /**
  * Get the median of the Data Stream
  */
+package nowcoder.sword;
+import java.util.PriorityQueue;
 import java.util.*;
 public class GetTheMedian {
     public PriorityQueue<Integer> max=new PriorityQueue<Integer>(new Comparator<Integer>(){

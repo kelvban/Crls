@@ -1,3 +1,4 @@
+package nowcoder.sword;
 class Node{
     int val;
     Node next=null;

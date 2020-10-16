@@ -1,6 +1,7 @@
 /**
  * find two nums in the array who just appear once
  */
+package nowcoder.sword;
 import java.util.*;
 
 public class FindWhoAppearOnce {

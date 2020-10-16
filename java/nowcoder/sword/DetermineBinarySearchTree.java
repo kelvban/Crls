@@ -1,14 +1,10 @@
 /**
  * Determine whether the array satisfies the post order traversal of binary search tree
  */
+package nowcoder.sword;
 
- class DetermineBinarySearchTree{
 
-    /**
- * Determine whether the array satisfies the post order traversal of binary search tree
- */
-
- class DetermineBinarySearchTree{
+ public class DetermineBinarySearchTree{
 
         public boolean VerifySquenceOfBST(int [] sequence) {
             if(sequence==null||sequence.length==0){
@@ -38,4 +34,3 @@
             return VerifyTree(sequence,head,i-1)&&VerifyTree(sequence,i,root-1);
         }
     }
- }

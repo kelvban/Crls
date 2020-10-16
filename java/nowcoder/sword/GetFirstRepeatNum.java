@@ -1,3 +1,5 @@
+
+package nowcoder.sword;
 public class GetFirstRepeatNum {
     public boolean duplicate(int numbers[],int length,int [] duplication) {
         boolean result=false;

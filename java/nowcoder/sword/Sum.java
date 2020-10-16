@@ -1,6 +1,7 @@
 /**
  * sum of 1+2+3...+n
  */
+package nowcoder.sword;
 public class Sum {
     public int Sum_Solution(int n) {
         int result=n;

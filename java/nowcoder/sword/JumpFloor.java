@@ -1,3 +1,4 @@
+package nowcoder.sword;
 class JumpFloor{
     public int JumpFloor(int target) {
         if(target==1)

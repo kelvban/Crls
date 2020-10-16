@@ -3,6 +3,7 @@
 /**
  * Cut rope to get the max product of pieces
  */
+package nowcoder.sword;
 class CutRope{
     public int cutRope(int target) {
         if(target<2){

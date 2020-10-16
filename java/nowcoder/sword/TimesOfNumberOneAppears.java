@@ -1,7 +1,7 @@
 /**
  * Times Of Number One appears
  */
-
+package nowcoder.sword;
  class TimesOfNumberOneAppears{
     public int NumberOf1Between1AndN_Solution(int n) {
         int result=0;

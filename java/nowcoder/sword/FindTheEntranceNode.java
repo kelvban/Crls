@@ -2,6 +2,7 @@
 /**
  * find the EntraceNode of the list who has a circle
  */
+package nowcoder.sword;
 import java.util.*;
 class ListNode{
     int val;

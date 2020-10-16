@@ -1,6 +1,7 @@
 /**
  * judge the out-stack sequence
  */
+package nowcoder.sword;
 import java.util.*;
  class JudgeOutStackSequence{
     public boolean IsPopOrder(int [] pushA,int [] popA) {

@@ -1,3 +1,4 @@
+package nowcoder.sword;
 class RectCover{
     public int RectCover(int target) {
         if(target<=0){

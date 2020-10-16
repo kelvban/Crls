@@ -2,7 +2,7 @@
  * Find the number of targets in a two-dimensional array
  *
  */
-
+package nowcoder.sword;
  class FindTargetInTArray{
     public boolean Find(int target, int [][] array) {
         // for(int i=0;i<array.length;i++){

@@ -2,6 +2,7 @@
  *
  * 将数组中的奇数提前，偶数奇数次序不变
  * */
+package nowcoder.sword;
 class ReOrderArray{
     public void reOrderArray(int [] array){
         int oddNum=0;
