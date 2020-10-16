@@ -1,7 +1,7 @@
 #include<iostream>
 
 using namespace std;
-/*
+
 struct TreeNode {
 	int val;
 	struct TreeNode *left;
@@ -9,7 +9,7 @@ struct TreeNode {
 	TreeNode(int x) :
 			val(x), left(NULL), right(NULL) {
 	}
-};*/
+};
 class Solution {
 public:
     void Mirror(TreeNode *pRoot) {

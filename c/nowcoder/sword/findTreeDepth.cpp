@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-//struct Tree{
-//	int val;
-//	struct Tree* left;
-//	struct Tree* right;
-//	TreeNode(int x) :
-//			val(x), left(NULL), right(NULL) {
-//	} 
-//};
+struct Tree{
+	int val;
+	struct Tree* left;
+	struct Tree* right;
+	Tree(int x) :
+			val(x), left(NULL), right(NULL) {
+	} 
+};
 
 class Solution{
 	public:
