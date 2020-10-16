@@ -1,15 +1,10 @@
 /**
  * print tree node layer by layer 
  */
-class TreeNode{
-    int val=0;
-    TreeNode left=null;
-    TreeNode right=null;
+package nowcoder.sword;
 
-    public TreeNode(int val){
-        this.val=val;
-    }
-}
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 class PrintTreeByBfs{
 
