@@ -35,6 +35,7 @@ public class MinimumStringOfNumber {
                     count++;
                 }
             }
+            //将不同的数字组合成一个字符串
             recur(temp,cur+Integer.toString(numbers[i]),result);
         }
     }
