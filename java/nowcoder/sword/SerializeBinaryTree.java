@@ -30,7 +30,7 @@
           treeNode.right=Deserialize(str);
         }
         return treeNode;
-         
+         s
     }
 
  }

@@ -24,10 +24,11 @@ public class FindNumInArray {
         else
             return 0;
     }
-    // public static void main(String[] args) {
-    //     FindNumInArray findNumInArray=new FindNumInArray();
-    //     int [] array={2,3,2,2,2,5,4};
-    //     int result=findNumInArray.MoreThanHalfNum_Solution(array);
-    //     System.out.println(result);
-    // }
+    
+    public static void main(String[] args) {
+        FindNumInArray findNumInArray=new FindNumInArray();
+        int [] array={2,3,2,2,2,5,4};
+        int result=findNumInArray.MoreThanHalfNum_Solution(array);
+        System.out.println(result);
+    }
 }
