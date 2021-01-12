@@ -58,7 +58,7 @@ public class LongestPalindromicSubstring_5 {
                     if (j - i < 3) {
                         dp[i][j] = true;
                     } else {
-                        dp[i][j] = dp[i + 1][j - 1];
+                        dp[i][j] = dp[i + 1][j - 1]; //Its status depends on the status it contains
                     }
                 }
 
