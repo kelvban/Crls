@@ -34,5 +34,6 @@ public class DistinctAndSort {
                 System.out.println(integer);
             }
         }
+        sc.close();
     }
 }

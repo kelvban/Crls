@@ -9,5 +9,6 @@ public class Decode {
             String num=sc.next();
             System.out.println(Integer.decode(num));
         }
+        sc.close();
     }
 }

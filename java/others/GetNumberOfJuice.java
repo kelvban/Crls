@@ -23,5 +23,6 @@ public class GetNumberOfJuice {
             nums.add(sc.nextInt());
         }
         getNumberOfJuice(nums);
+        sc.close();
     } 
 }
