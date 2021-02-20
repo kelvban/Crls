@@ -57,6 +57,7 @@ public class DeleteNumber {
                 System.out.println(list.get(0));
             }
            sc.close();
+           return ;
         
     }
 }
