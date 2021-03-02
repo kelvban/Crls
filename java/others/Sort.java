@@ -1,11 +1,13 @@
 package others;
 
+import javafx.scene.effect.Light.Point;
+
 public class Sort {
     public static void main(String[] args) {
         int[] arr=new int[]{2,4,3,5,1};
-        int[] result=selectSort(arr);
+        quickSort(arr,0,arr.length-1);
         StringBuffer sb =new StringBuffer();
-        for(Integer i:result){
+        for(Integer i:arr){
             sb.append(i).append(" ");
         }
         System.out.println(sb.toString());
@@ -40,4 +42,39 @@ public class Sort {
         }
         return arr;
     }
+
+    public static void quickSort(int[] arr,int left,int right){
+        int dp;
+        if(left<right){
+            dp=partition(arr, left, right);
+            quickSort(arr, left, dp-1);
+            quickSort(arr, dp+1, right);
+        }
+    }
+    public static int partition(int[] arr,int left,int right){
+        int pivot=arr[left];
+        while(left<right){
+            while(left<right&&arr[right]>=pivot){
+                right--;
+            }
+            if(left<right){
+                arr[left++]=arr[right];
+            }
+            while(left<right&&arr[left]<=pivot){
+                left++;
+            }
+            if(left<right){
+                arr[right--]=arr[left];
+            }
+        }
+        arr[left]=pivot;
+        return left;
+    }
+
+    // public static int[] swap(int[] arr,int i,int j){
+    //     int temp=arr[i];
+    //     arr[i]=arr[j];
+    //     arr[j]=temp;
+    //     return arr;
+    // }
 }
