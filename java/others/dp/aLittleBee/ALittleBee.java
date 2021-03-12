@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import javax.sound.midi.Sequence;
+
 public class ALittleBee {
     public static void main(String[] args) {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -12,12 +14,19 @@ public class ALittleBee {
                 String[] strs=flagPositionStr.split(" ");
                 int startPosition=Integer.parseInt(strs[0]);
                 int endPosition=Integer.parseInt(strs[1]);
-
+                int[] arr=new int[50];
+                int sequence=startPosition-endPosition;
+                if(sequence==1||sequence==2){
+                    System.out.println(sequence);
+                }else{
+                    arr[0]=1;
+                    arr[1]=2;
+                    for(int j=2;j<sequence;j++){
+                        arr[j]=arr[j-1]+arr[j-2];
+                    }
+                }
             }
         }
         br.close();
-    }
-    public static int getResult(int sequence){
-        
     }
 }
