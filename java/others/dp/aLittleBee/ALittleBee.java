@@ -19,13 +19,16 @@ public class ALittleBee {
                 if(sequence==1||sequence==2){
                     System.out.println(sequence);
                 }else{
-                    arr[0]=1;
-                    arr[1]=2;
-                    for(int j=2;j<sequence;j++){
+                    arr[0]=0;
+                    arr[1]=1;
+                    arr[2]=2;
+                    for(int j=3;j<50;j++){
                         arr[j]=arr[j-1]+arr[j-2];
                     }
                 }
+                System.out.println(arr[endPosition-startPosition]);
             }
+            
         }
         br.close();
     }
