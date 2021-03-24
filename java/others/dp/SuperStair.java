@@ -8,11 +8,11 @@ import java.io.InputStreamReader;
  */
 public class SuperStair {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         String str="";
         while((br.readLine())!=null){
-            int[] arr=new arr[55];
+            int[] arr=new int[55];
             int num=Integer.parseInt(str);
             if(num<=3){
                 System.out.println(num-1);
