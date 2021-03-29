@@ -11,7 +11,7 @@ public class SuperStair {
     public static void main(String[] args) throws Exception{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         String str="";
-        while((br.readLine())!=null){
+        while((str=br.readLine())!=null){
             int[] arr=new int[55];
             int num=Integer.parseInt(str);
             if(num<=3){
@@ -20,7 +20,7 @@ public class SuperStair {
             arr[2]=1;
             arr[3]=2;
             for(int i=4;i<55;i++){
-                arr[i]=arr[i-1]+arr[i+1];
+                arr[i]=arr[i-1]+arr[i-2];
             }
             System.out.println(arr[num]);
         }
