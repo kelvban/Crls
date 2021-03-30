@@ -15,7 +15,7 @@ public class DigitalTower_Recursion{
 					tower[i][j]=Integer.parseInt(strs[j]);
 				}
 			}
-			for(int i=num-2;i>=0;)
+			
 		}
 		br.close();
 	}

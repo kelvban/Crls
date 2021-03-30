@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import javax.sound.midi.Sequence;
 
 public class ALittleBee {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         String str=null;
         while((str=br.readLine())!=null){
