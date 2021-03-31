@@ -1,4 +1,9 @@
-package leetcode;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.List;
+
+import javafx.scene.Cursor;
 
 class ListNode{
     int val;
@@ -37,5 +42,43 @@ public class AddTwoNumbers_2 {
         }
         l1.next=addTwoNumbers(l1.next,l2.next);
         return l1;
+    }
+    public static void main(String[] args)throws Exception{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String str=br.readLine();
+        String str1=br.readLine();
+        ListNode head=new ListNode();
+        ListNode head1=new ListNode();
+        if((str==null||str.isEmpty())&&(str1==null||str1.isEmpty())){
+            return ;
+        }
+        if((str!=null||!str.isEmpty())&&(str1==null||str1.isEmpty())){
+            String[] strs=str.split(" ");
+            int[] nums=new int[strs.length];
+            ListNode cursor=new ListNode();
+            for(int i=0;i<strs.length;i++){
+                nums[i]=Integer.parseInt(strs[i]);
+                ListNode lNode=new ListNode(nums[i]);
+                if(head.val==0){ //The first interpolation
+                    head=cursor=lNode;
+                }else{
+                    cursor.next=lNode;
+                    cursor=lNode;
+                }
+
+                // if(head.val==0){ //The tail interpolation
+                //     head=lNode;
+                // }else{
+                //     lNode.next=head;
+                //     head=lNode;
+
+                // }
+            }
+            while(head!=null){
+                System.out.println(head.val);
+                head=head.next;
+            }
+        }
+        br.close();
     }
 }
