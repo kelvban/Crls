@@ -22,12 +22,16 @@ public class ReverseInteger_7 {
         while(!stack.empty()){
             sb.append(stack.pop());
         }
-        if(Pattern.matches(pattern, String.valueOf(xChars[0]))){
-            result=Integer.parseInt(sb.toString());
-        }else{
-            result=Integer.parseInt(String.valueOf(xChars[0])+sb.toString());
+        double res=Double.parseDouble(sb.toString());
+        if(res>Integer.MAX_VALUE||res*(-1)<Integer.MIN_VALUE){
+            return 0;
         }
-        return result;
+        if(Pattern.matches(pattern, String.valueOf(xChars[0]))){
+            return result=Integer.parseUnsignedInt(sb.toString());
+        }else{
+            return result=Integer.parseInt(String.valueOf(xChars[0])+sb.toString());
+        }
+        
     }
     public static void main(String[] args) {
         int x=-108;
