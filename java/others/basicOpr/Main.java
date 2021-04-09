@@ -1,3 +1,5 @@
+import java.util.regex.Pattern;
+
 // import java.io.*;
 // public class Main{
 //     public static void main(String[] args) throws Exception{
@@ -92,59 +94,76 @@
 //     }
 // }
 
-import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-public class Main{
-    public static void main(String[] args) throws Exception{
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-        String str=null;
-        while((str=br.readLine())!=null){
-            String[] strs=str.split(",");
-            int customer=Integer.parseInt(strs[0]);
-            int shop=Integer.parseInt(strs[1]);
-            Map<Integer,Integer> mostVoteMap=new HashMap<>();
-            Map<Integer,Map<Integer,Integer>> voteInfo=new HashMap<>();
-            int[] arr=new int[customer];
-            for(int i=0;i<customer;i++){
-                String vote=br.readLine();
-                String[] voteStrs=vote.split(",");
-                if(!mostVoteMap.containsKey(Integer.parseInt(voteStrs[0]))){
-                    mostVoteMap.put(Integer.parseInt(voteStrs[0]), 1);
-                }else{
-                    mostVoteMap.put(Integer.parseInt(voteStrs[0]), mostVoteMap.get(Integer.parseInt(voteStrs[0])));
-                }
-                HashMap<Integer,Integer> tempMap=new HashMap<>();
-                tempMap.put(Integer.parseInt(voteStrs[0]), Integer.parseInt(voteStrs[1]));
-                voteInfo.put(i, tempMap);
-                arr[i]=Integer.parseInt(voteStrs[0]);
-            }
-            int maxVotedShop=0;
-            int maxVotedNumber=0;
-            for(Integer i:mostVoteMap.keySet()){
-                if(mostVoteMap.get(i)>maxVotedNumber){
-                    maxVotedNumber=mostVoteMap.get(i);
-                    maxVotedShop=i;
-                }
-            }
-            maxVotedNumber=mostVoteMap.get(maxVotedShop);
-            if(maxVotedShop==1){
-                System.out.println(0);
-            }else{
-                int voteOne=mostVoteMap.get(1);
-                int result=0;
-                //int minCost=0;
-                while(voteOne<=maxVotedNumber){
-                    int minCost=0;
-                    for(Integer i:voteInfo.keySet()){
-                        Map<Integer,Integer> map=new HashMap<>();
-                        map=voteInfo.get(i);
-                        map.get(i);
-                    }
-                }
-            }
+// import java.io.*;
+// import java.util.HashMap;
+// import java.util.Map;
+// public class Main{
+//     public static void main(String[] args) throws Exception{
+//         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+//         String str=null;
+//         while((str=br.readLine())!=null){
+//             String[] strs=str.split(",");
+//             int customer=Integer.parseInt(strs[0]);
+//             int shop=Integer.parseInt(strs[1]);
+//             Map<Integer,Integer> mostVoteMap=new HashMap<>();
+//             Map<Integer,Map<Integer,Integer>> voteInfo=new HashMap<>();
+//             int[] arr=new int[customer];
+//             for(int i=0;i<customer;i++){
+//                 String vote=br.readLine();
+//                 String[] voteStrs=vote.split(",");
+//                 if(!mostVoteMap.containsKey(Integer.parseInt(voteStrs[0]))){
+//                     mostVoteMap.put(Integer.parseInt(voteStrs[0]), 1);
+//                 }else{
+//                     mostVoteMap.put(Integer.parseInt(voteStrs[0]), mostVoteMap.get(Integer.parseInt(voteStrs[0])));
+//                 }
+//                 HashMap<Integer,Integer> tempMap=new HashMap<>();
+//                 tempMap.put(Integer.parseInt(voteStrs[0]), Integer.parseInt(voteStrs[1]));
+//                 voteInfo.put(i, tempMap);
+//                 arr[i]=Integer.parseInt(voteStrs[0]);
+//             }
+//             int maxVotedShop=0;
+//             int maxVotedNumber=0;
+//             for(Integer i:mostVoteMap.keySet()){
+//                 if(mostVoteMap.get(i)>maxVotedNumber){
+//                     maxVotedNumber=mostVoteMap.get(i);
+//                     maxVotedShop=i;
+//                 }
+//             }
+//             maxVotedNumber=mostVoteMap.get(maxVotedShop);
+//             if(maxVotedShop==1){
+//                 System.out.println(0);
+//             }else{
+//                 int voteOne=mostVoteMap.get(1);
+//                 int result=0;
+//                 //int minCost=0;
+//                 while(voteOne<=maxVotedNumber){
+//                     int minCost=0;
+//                     for(Integer i:voteInfo.keySet()){
+//                         Map<Integer,Integer> map=new HashMap<>();
+//                         map=voteInfo.get(i);
+//                         map.get(i);
+//                     }
+//                 }
+//             }
 
+//         }
+//         br.close();
+//     }
+// }
+public class Main{
+    public static void main(String[] args) {
+        //String s=",hsjd,,sdhfjdhfj,,,sdjkfhdjf,,,,";
+        String s="6768";
+        String pattern="^[0-9]*$";
+        if(Pattern.matches(pattern, s)){
+            System.out.println(true);
+        }else{
+            System.out.println(false);
         }
-        br.close();
+        // String[] ss=s.split(",");
+        // for(String str:ss){
+        //     System.out.println(str);
+        //     System.out.println("--------------------");
+        // }
     }
 }
